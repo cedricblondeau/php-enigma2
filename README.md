@@ -4,6 +4,9 @@ A modern PHP library and CLI for updating Enigma2/Dreambox bouquets
 
 ## CLI Usage
 ```bash
+cp etc/config.yml.example etc/config.yml
+vi config.yml # edit config.yml
+chmod +x ./bin/console
 ./bin/console upload /path/to/bouquets
 ./bin/console reload
 ```
