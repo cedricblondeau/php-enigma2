@@ -34,10 +34,11 @@ class Ftp implements Transport
                         ftp_put($stream, $file->getDestination(), $file->getOrigin(), FTP_ASCII);
                     }
                 }
+                ftp_close($stream);
             } else {
+                ftp_close($stream);
                 throw new \RuntimeException("Cannot login to FTP");
             }
-            ftp_close($stream);
         } else {
             throw new \RuntimeException("Cannot connect to FTP");
         }
