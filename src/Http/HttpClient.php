@@ -37,6 +37,6 @@ class HttpClient
 
     public function reloadBouquets()
     {
-        $this->execute("servicelistreload?mode=0");
+        return $this->execute("servicelistreload?mode=0");
     }
 }
