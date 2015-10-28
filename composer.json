@@ -1,0 +1,18 @@
+{
+  "name": "cedricblondeau/php-enigma2",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Cédric Blondeau"
+    }
+  ],
+  "require": {
+    "webmozart/console": "~1.0@beta",
+    "symfony/yaml": "^2.7"
+  },
+  "autoload": {
+    "psr-4": {
+      "CedricBlondeau\\PhpEnigma2\\": "src/"
+    }
+  }
+}
