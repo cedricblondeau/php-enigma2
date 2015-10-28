@@ -1,4 +1,4 @@
-php-enimga2
+php-enigma2
 ---
 A modern PHP library and CLI for updating Enigma2/Dreambox bouquets
 
