@@ -8,6 +8,7 @@ use Webmozart\Console\Api\IO\IO;
 class ReloadCommandHandler extends BaseCommandHandler
 {
     /**
+     * @param Args $args
      * @param IO $io
      */
     public function handle(Args $args, IO $io)
