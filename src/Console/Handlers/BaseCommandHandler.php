@@ -1,7 +1,6 @@
 <?php
 namespace CedricBlondeau\PhpEnigma2\Console\Handlers;
 
-use Webmozart\Console\Api\Args\Args;
 use Webmozart\Console\Api\IO\IO;
 use CedricBlondeau\PhpEnigma2\Profile;
 use Symfony\Component\Yaml\Yaml;
@@ -11,10 +10,9 @@ class BaseCommandHandler
     protected $profile;
 
     /**
-     * @param Args $args
      * @param IO $io
      */
-    public function handle(Args $args, IO $io)
+    public function handle(IO $io)
     {
         $configFile = __DIR__ . '/../../../etc/config.yml';
         if (file_exists($configFile) && is_file($configFile)) {

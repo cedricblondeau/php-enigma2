@@ -3,7 +3,6 @@ namespace CedricBlondeau\PhpEnigma2\Console\Handlers;
 
 use CedricBlondeau\PhpEnigma2\Http\HttpClient;
 use Webmozart\Console\Api\Args\Args;
-use Webmozart\Console\Api\Command\Command;
 use Webmozart\Console\Api\IO\IO;
 
 class ReloadCommandHandler extends BaseCommandHandler
@@ -11,11 +10,10 @@ class ReloadCommandHandler extends BaseCommandHandler
     /**
      * @param Args $args
      * @param IO $io
-     * @param Command $command
      */
-    public function handle(Args $args, IO $io, Command $command)
+    public function handle(Args $args, IO $io)
     {
-        parent::handle($args, $io, $command);
+        parent::handle($io);
 
         $httpClient = new HttpClient($this->profile);
         $result = $httpClient->reloadBouquets();

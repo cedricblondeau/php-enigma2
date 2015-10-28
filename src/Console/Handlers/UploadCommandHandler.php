@@ -5,7 +5,6 @@ use CedricBlondeau\PhpEnigma2\Bouquets\Files;
 use CedricBlondeau\PhpEnigma2\Bouquets\Transport\Ftp;
 use CedricBlondeau\PhpEnigma2\Bouquets\Uploader;
 use Webmozart\Console\Api\Args\Args;
-use Webmozart\Console\Api\Command\Command;
 use Webmozart\Console\Api\IO\IO;
 
 class UploadCommandHandler extends BaseCommandHandler
@@ -13,11 +12,10 @@ class UploadCommandHandler extends BaseCommandHandler
     /**
      * @param Args $args
      * @param IO $io
-     * @param Command $command
      */
-    public function handle(Args $args, IO $io, Command $command)
+    public function handle(Args $args, IO $io)
     {
-        parent::handle($args, $io, $command);
+        parent::handle($args, $io);
 
         try {
             $filesScanner = new Files\Scanner($args->getArgument('path'));
