@@ -8,12 +8,11 @@ use Webmozart\Console\Api\IO\IO;
 class ReloadCommandHandler extends BaseCommandHandler
 {
     /**
-     * @param Args $args
      * @param IO $io
      */
     public function handle(Args $args, IO $io)
     {
-        parent::handle($io);
+        parent::parseConfig($io);
 
         $httpClient = new HttpClient($this->profile);
         $result = $httpClient->reloadBouquets();

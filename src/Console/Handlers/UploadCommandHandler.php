@@ -15,7 +15,7 @@ class UploadCommandHandler extends BaseCommandHandler
      */
     public function handle(Args $args, IO $io)
     {
-        parent::handle($args, $io);
+        parent::parseConfig($io);
 
         try {
             $filesScanner = new Files\Scanner($args->getArgument('path'));

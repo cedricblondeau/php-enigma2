@@ -5,14 +5,14 @@ use Webmozart\Console\Api\IO\IO;
 use CedricBlondeau\PhpEnigma2\Profile;
 use Symfony\Component\Yaml\Yaml;
 
-class BaseCommandHandler
+abstract class BaseCommandHandler
 {
     protected $profile;
 
     /**
      * @param IO $io
      */
-    public function handle(IO $io)
+    protected function parseConfig(IO $io)
     {
         $configFile = __DIR__ . '/../../../etc/config.yml';
         if (file_exists($configFile) && is_file($configFile)) {
