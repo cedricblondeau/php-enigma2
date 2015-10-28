@@ -1,0 +1,9 @@
+#!/usr/bin/env php
+<?php
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use Webmozart\Console\ConsoleApplication;
+use CedricBlondeau\PhpEnigma2\Console\ApplicationConfig;
+
+$cli = new ConsoleApplication(new ApplicationConfig());
+$cli->run();
