@@ -15,7 +15,7 @@ class HttpClient
      */
     function __construct(Profile $profile)
     {
-        $this->url = "http://" . $profile->getHost() . "/web/";;
+        $this->url = "http://" . $profile->getHost() . "/web/";
     }
 
     /**
