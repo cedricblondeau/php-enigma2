@@ -1,15 +1,21 @@
 {
   "name": "cedricblondeau/php-enigma2",
+  "description": " A modern PHP library and CLI for updating Enigma2/Dreambox bouquets",
   "license": "MIT",
   "authors": [
     {
-      "name": "Cédric Blondeau"
+      "name": "Cédric Blondeau",
+      "role": "developer",
+      "homepage": "http://www.cedricblondeau.com"
     },
     {
-      "name": "Mickaël Blondeau"
+      "name": "Mickaël Blondeau",
+      "role": "developer",
+      "homepage": "http://www.mickaelblondeau.com"
     }
   ],
   "require": {
+    "php": ">=5.3.6",
     "webmozart/console": "~1.0@beta",
     "symfony/yaml": "^2.7",
     "vipsoft/unzip": "1.1"
