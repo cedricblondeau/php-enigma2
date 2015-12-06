@@ -18,8 +18,7 @@ class DownloadCommandHandler extends BaseCommandHandler
 
         try {
             $retriever = new Retriever();
-            $file = $retriever->download($args->getArgument('path'));
-            $retriever->extract($file);
+            $retriever->download($args->getArgument('path'));
             $io->writeLine("Extracted");
         } catch (\RuntimeException $e) {
             $io->errorLine("Invalid path");

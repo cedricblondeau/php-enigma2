@@ -18,7 +18,7 @@ class Retriever
     }
 
     /**
-     * Download the remote file and write it to the tmp directory
+     * Download and extract the remote file
      *
      * @param string $url
      * @return string
@@ -26,7 +26,7 @@ class Retriever
     public function download($url)
     {
         file_put_contents($this->tmpArchive, fopen($url, 'r'));
-        return $this->tmpArchive;
+        return $this->extract($this->tmpArchive);
     }
 
     /**

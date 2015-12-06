@@ -16,8 +16,7 @@ chmod +x ./bin/console
 ```php
 // Retrieve bouquets archive and extract it
 $retriever = new Retriever();
-$file = $retriever->download("http://domain.tld/bouquets.zip");
-$directory = $retriever->extract($file);
+$directory = $retriever->download("http://domain.tld/bouquets.zip");
 
 // Parse bouquets files
 $filesScanner = new Scanner($directory);
@@ -34,9 +33,6 @@ $uploader->upload(); // Throws RuntimeException
 // Reload bouquets
 $client = new HttpClient($profile);
 $client->reloadBouquets();
-
-// Clear the tmp resources
-$retriever->clearTempFiles();
 ```
 
 ## TODO

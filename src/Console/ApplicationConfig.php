@@ -23,7 +23,7 @@ class ApplicationConfig extends DefaultApplicationConfig
             ->end()
 
             ->beginCommand('download')
-            ->setDescription('Download bouquets file')
+            ->setDescription('Download and extract bouquets file')
             ->setHandler(new DownloadCommandHandler())
             ->addArgument('path', Argument::REQUIRED, 'Path')
             ->end()
