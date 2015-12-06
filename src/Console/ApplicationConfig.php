@@ -25,7 +25,7 @@ class ApplicationConfig extends DefaultApplicationConfig
             ->beginCommand('download')
             ->setDescription('Download and extract bouquets file')
             ->setHandler(new DownloadCommandHandler())
-            ->addArgument('path', Argument::REQUIRED, 'Path')
+            ->addArgument('url', Argument::REQUIRED, 'Url')
             ->end()
 
             ->beginCommand('reload')

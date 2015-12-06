@@ -18,7 +18,8 @@ class Retriever
     }
 
     /**
-     * Download and extract the remote file
+     * Download and extract the bouquets archive from the web
+     * eg : download('http://domain.tld/bouquets.zip');
      *
      * @param string $url
      * @return string
@@ -26,7 +27,8 @@ class Retriever
     public function download($url)
     {
         file_put_contents($this->tmpArchive, fopen($url, 'r'));
-        return $this->extract($this->tmpArchive);
+        $this->extract($this->tmpArchive);
+        return $this->tmpBouquets;
     }
 
     /**
@@ -34,7 +36,6 @@ class Retriever
      * If the file does not exist, throw an exception
      *
      * @param $file
-     * @return string
      * @throws \Exception
      */
     private function extract($file)
@@ -43,7 +44,6 @@ class Retriever
             $unzip = new Unzip();
             $unzip->extract($file, $this->tmpDir);
             $this->renameDirectory();
-            return $this->tmpBouquets;
         } else {
             throw new \RuntimeException("File not found");
         }
