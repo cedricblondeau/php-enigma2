@@ -22,7 +22,7 @@ abstract class BaseCommandHandler
             $config = Yaml::parse(file_get_contents($configFile));
             try {
                 $this->profile = Profile::fromArray($config);
-            } catch (\RuntimeException $e) {
+            } catch (\InvalidArgumentException $e) {
                 $io->errorLine("Invalid config.yml file");
                 exit();
             }

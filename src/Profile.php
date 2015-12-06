@@ -41,7 +41,7 @@ class Profile
             $profile = new self($data['host'], $data['user'], $data['password']);
             return $profile;
         } else {
-            throw new \RuntimeException("Invalid array");
+            throw new \InvalidArgumentException("Invalid array");
         }
     }
 
