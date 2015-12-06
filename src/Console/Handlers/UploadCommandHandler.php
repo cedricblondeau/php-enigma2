@@ -3,7 +3,7 @@ namespace CedricBlondeau\PhpEnigma2\Console\Handlers;
 
 use CedricBlondeau\PhpEnigma2\Bouquets\Files;
 use CedricBlondeau\PhpEnigma2\Bouquets\Uploader\Transport\Ftp;
-use CedricBlondeau\PhpEnigma2\Bouquets\Uploader\Uploader;
+use CedricBlondeau\PhpEnigma2\Bouquets\Uploader;
 use Webmozart\Console\Api\Args\Args;
 use Webmozart\Console\Api\IO\IO;
 

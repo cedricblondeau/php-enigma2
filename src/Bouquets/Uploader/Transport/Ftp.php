@@ -2,6 +2,7 @@
 namespace CedricBlondeau\PhpEnigma2\Bouquets\Uploader\Transport;
 
 use CedricBlondeau\PhpEnigma2\Bouquets\Files;
+use CedricBlondeau\PhpEnigma2\Bouquets\Uploader\Transport;
 use CedricBlondeau\PhpEnigma2\Profile;
 
 class Ftp implements Transport
