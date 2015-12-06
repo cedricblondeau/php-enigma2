@@ -8,5 +8,5 @@ interface Transport
     /**
      * @param array $files
      */
-    function upload(array $files);
+    public function upload(array $files);
 }

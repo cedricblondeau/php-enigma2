@@ -26,9 +26,8 @@ class UploadCommandHandler extends BaseCommandHandler
         }
 
         try {
-            $transport = new Ftp($this->profile);
-            $uploader = new Uploader($transport, $files);
-            $uploader->upload();
+            $uploader = new Uploader(new Ftp($this->profile));
+            $uploader->upload($files);
             $io->writeLine("Uploaded");
         } catch (\RuntimeException $e) {
             $io->errorLine($e->getMessage());

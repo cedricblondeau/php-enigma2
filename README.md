@@ -26,9 +26,8 @@ $files = $filesScanner->scan(); // Throws RuntimeException
 $profile = new Profile("192.168.1.10", "user", "password");
 
 // Upload files via FTP
-$transport = new Ftp($profile);
-$uploader = new Uploader($transport, $files);
-$uploader->upload(); // Throws RuntimeException
+$uploader = new Uploader(new Ftp($profile));
+$uploader->upload($files); // Throws RuntimeException
 
 // Reload bouquets
 $client = new HttpClient($profile);

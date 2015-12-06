@@ -14,7 +14,7 @@ class Ftp implements Transport
     /**
      * @param Profile $profile
      */
-    function __construct(Profile $profile)
+    public function __construct(Profile $profile)
     {
         $this->host = $profile->getHost();
         $this->user = $profile->getUser();
@@ -24,7 +24,7 @@ class Ftp implements Transport
     /**
      * @param array $files
      */
-    function upload(array $files)
+    public function upload(array $files)
     {
         $stream = ftp_connect($this->host, 21, 10);
         if ($stream) {

@@ -3,22 +3,29 @@ namespace CedricBlondeau\PhpEnigma2\Bouquets;
 
 use CedricBlondeau\PhpEnigma2\Bouquets\Uploader\Transport;
 
+/**
+ * Class Uploader
+ *
+ * This proxy pattern implementation may not be required anymore...
+ *
+ * @package CedricBlondeau\PhpEnigma2\Bouquets
+ */
 class Uploader
 {
     private $transport;
-    private $files;
 
     /**
      * @param Transport $transport
-     * @param array $files
      */
-    function __construct(Transport $transport, array $files)
+    function __construct(Transport $transport)
     {
         $this->transport = $transport;
-        $this->files = $files;
     }
 
-    public function upload() {
-        $this->transport->upload($this->files);
+    /**
+     * @param array $files
+     */
+    public function upload(array $files) {
+        $this->transport->upload($files);
     }
 }
