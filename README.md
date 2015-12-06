@@ -7,6 +7,7 @@ A modern PHP library and CLI for updating Enigma2/Dreambox bouquets
 cp etc/config.yml.example etc/config.yml
 vi config.yml # edit config.yml
 chmod +x ./bin/console
+mkdir tmp/
 ./bin/console download "http://domain.tld/bouquets.zip"
 ./bin/console upload tmp/bouquets
 ./bin/console reload
@@ -20,7 +21,7 @@ $directory = $retriever->download("http://domain.tld/bouquets.zip");
 
 // Parse bouquets files
 $filesScanner = new Scanner($directory);
-$files = $filesScanner->scan(); // Throws RuntimeException
+$files = $filesScanner->scan(); // Throws RuntimeException if invalid directory
 
 // Create a dreambox/engima2 profile
 $profile = new Profile("192.168.1.10", "user", "password");
