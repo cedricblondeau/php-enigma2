@@ -2,3 +2,5 @@
 etc/config.yml
 vendor/
 tmp/*
+.DS_Store
+**/.DS_Store
