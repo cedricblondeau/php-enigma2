@@ -3,7 +3,15 @@ namespace CedricBlondeau\PhpEnigma2\Http;
 
 use CedricBlondeau\PhpEnigma2\Profile;
 
-class HttpClient
+/**
+ * Class Http/Client
+
+ * Could be refactored to support different http client implementation
+ * than curl but definitely not necessary right now.
+ *
+ * @package CedricBlondeau\PhpEnigma2\Http
+ */
+class Client
 {
     /**
      * @var string

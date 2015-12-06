@@ -1,7 +1,7 @@
 <?php
 namespace CedricBlondeau\PhpEnigma2\Console\Handlers;
 
-use CedricBlondeau\PhpEnigma2\Http\HttpClient;
+use CedricBlondeau\PhpEnigma2\Http\Client;
 use Webmozart\Console\Api\Args\Args;
 use Webmozart\Console\Api\IO\IO;
 
@@ -15,7 +15,7 @@ class ReloadCommandHandler extends BaseCommandHandler
     {
         parent::parseConfig($io);
 
-        $httpClient = new HttpClient($this->profile);
+        $httpClient = new Client($this->profile);
         $result = $httpClient->reloadBouquets();
         if ($result) {
             $io->writeLine("Reloaded");
