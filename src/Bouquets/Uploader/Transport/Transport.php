@@ -1,5 +1,5 @@
 <?php
-namespace CedricBlondeau\PhpEnigma2\Bouquets\Transport;
+namespace CedricBlondeau\PhpEnigma2\Bouquets\Uploader\Transport;
 
 use CedricBlondeau\PhpEnigma2\Bouquets\Files;
 

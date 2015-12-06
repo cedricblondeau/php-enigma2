@@ -1,7 +1,7 @@
 <?php
-namespace CedricBlondeau\PhpEnigma2\Bouquets;
+namespace CedricBlondeau\PhpEnigma2\Bouquets\Uploader;
 
-use CedricBlondeau\PhpEnigma2\Bouquets\Transport\Transport;
+use CedricBlondeau\PhpEnigma2\Bouquets\Uploader\Transport\Transport;
 
 class Uploader
 {

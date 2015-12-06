@@ -37,7 +37,7 @@ class Retriever
      * @return string
      * @throws \Exception
      */
-    public function extract($file)
+    private function extract($file)
     {
         if(file_exists($file)) {
             $unzip = new Unzip();
@@ -52,7 +52,7 @@ class Retriever
     /**
      * Remove the tmp archive & tmp bouquets
      */
-    public function clearTempFiles()
+    private function clearTempFiles()
     {
         if(file_exists($this->tmpArchive)) {
             unlink($this->tmpArchive);
@@ -65,7 +65,7 @@ class Retriever
     /**
      * Rename the extracted directory
      */
-    public function renameDirectory()
+    private function renameDirectory()
     {
         rename($this->tmpDir . $this->getExtractedDirectory(), $this->tmpBouquets);
     }
@@ -75,7 +75,7 @@ class Retriever
      *
      * @return string
      */
-    public function getExtractedDirectory()
+    private function getExtractedDirectory()
     {
         $files = scandir($this->tmpDir);
         foreach($files as $file) {
@@ -91,7 +91,7 @@ class Retriever
      *
      * @param string $directory
      */
-    public function unlinkDirectory($directory)
+    private function unlinkDirectory($directory)
     {
         $files = glob($directory . '*', GLOB_MARK);
         foreach($files as $file) {
