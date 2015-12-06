@@ -15,7 +15,7 @@ mkdir tmp/
 
 ## PHP Usage
 ```php
-// Retrieve bouquets archive and extract it
+// Retrieve a bouquets archive (from vhannibal.net for example) and extract it
 $retriever = new Retriever();
 $directory = $retriever->download("http://domain.tld/bouquets.zip");
 
@@ -27,13 +27,10 @@ $files = $filesScanner->scan(); // Throws RuntimeException if invalid directory
 $profile = new Profile("192.168.1.10", "user", "password");
 
 // Upload files via FTP
-$uploader = new Uploader(new Ftp($profile));
-$uploader->upload($files); // Throws RuntimeException
+$ftp = new Ftp($profile);
+$ftp->upload($files); // Throws RuntimeException if FTP error
 
 // Reload bouquets
 $client = new HttpClient($profile);
 $client->reloadBouquets();
 ```
-
-## TODO
-- Implement other transports (SFTP, SCP, Telnet)
