@@ -23,7 +23,7 @@ class Profile
      * @param $user
      * @param $password
      */
-    function __construct($host, $user, $password)
+    public function __construct($host, $user, $password)
     {
         $this->host = $host;
         $this->user = $user;
