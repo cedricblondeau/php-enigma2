@@ -4,6 +4,7 @@ namespace CedricBlondeau\PhpEnigma2\Console;
 use Webmozart\Console\Config\DefaultApplicationConfig;
 use Webmozart\Console\Api\Args\Format\Argument;
 use CedricBlondeau\PhpEnigma2\Console\Handlers\UploadCommandHandler;
+use CedricBlondeau\PhpEnigma2\Console\Handlers\DownloadCommandHandler;
 use CedricBlondeau\PhpEnigma2\Console\Handlers\ReloadCommandHandler;
 
 class ApplicationConfig extends DefaultApplicationConfig
@@ -18,6 +19,12 @@ class ApplicationConfig extends DefaultApplicationConfig
             ->beginCommand('upload')
             ->setDescription('Upload bouquets files')
             ->setHandler(new UploadCommandHandler())
+            ->addArgument('path', Argument::REQUIRED, 'Path')
+            ->end()
+
+            ->beginCommand('download')
+            ->setDescription('Download bouquets file')
+            ->setHandler(new DownloadCommandHandler())
             ->addArgument('path', Argument::REQUIRED, 'Path')
             ->end()
 

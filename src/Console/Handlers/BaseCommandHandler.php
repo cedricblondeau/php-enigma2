@@ -7,6 +7,9 @@ use Symfony\Component\Yaml\Yaml;
 
 abstract class BaseCommandHandler
 {
+    /**
+     * @var Profile
+     */
     protected $profile;
 
     /**

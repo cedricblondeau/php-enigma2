@@ -8,7 +8,8 @@
   ],
   "require": {
     "webmozart/console": "~1.0@beta",
-    "symfony/yaml": "^2.7"
+    "symfony/yaml": "^2.7",
+    "vipsoft/unzip": "1.1"
   },
   "autoload": {
     "psr-4": {
